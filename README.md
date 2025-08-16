@@ -39,6 +39,5 @@ YourProjectFolder/
 └── [previews]/
     ├── Shimmer.xtp.wav
     ├── Sunset.xtp.wav
-    └── Sunset[TrackData].wav  ← remains unchanged (ignored by script)
 ```
 
