@@ -37,3 +37,18 @@ YourProjectFolder/
     ├── Sunset.xtp.wav
 ```
 
+## 🛠️ Features
+
+- 🔍 Compares filenames between track and preview folders
+- ⛔️ Skips files containing `[TrackData]` in the name
+- ✅ Renames matching `.wav` files to `Trackname.xtp.wav`
+- 🖥️ Terminal output with color-coded feedback
+
+## 🚀 Usage
+
+1. Place the script in your project folder.
+2. Ensure `.xtp` files are in the main folder and `.wav` files are in `[previews]`.
+3. Run the script:
+
+```bash
+./force-track-prelisten-renamer.sh
