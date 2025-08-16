@@ -32,10 +32,10 @@ This script ensures that your preview files are renamed to match the exact track
 
 Expected layout:
 
-YourProjectFolder/
-├── Shimmer.xtp
-├── Sunset.xtp
-└── [previews]/
-├── Shimmer.xtp.wav
-├── Sunset.xtp.wav
+YourProjectFolder/  
+├── Shimmer.xtp  
+├── Sunset.xtp  
+└── [previews]/  
+├── Shimmer.xtp.wav  
+├── Sunset.xtp.wav  
 
