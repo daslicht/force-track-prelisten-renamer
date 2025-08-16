@@ -48,7 +48,7 @@ YourProjectFolder/
 
 1. Place the script in your project folder.
 2. Ensure `.xtp` files are in the main folder and `.wav` files are in `[previews]`.
-3. Run the script:
+3. make command executable ```sudo chmod +x ../renamer.command (macOS)
+3.1 Windows? 
 
-```bash
-./renamer.command
+
