@@ -31,3 +31,11 @@ This script ensures that your preview files are renamed to match the exact track
 ## 📂 Folder Structure
 
 Expected layout:
+
+YourProjectFolder/
+├── Shimmer.xtp
+├── Sunset.xtp
+└── [previews]/
+├── Shimmer.xtp.wav
+├── Sunset.xtp.wav
+
