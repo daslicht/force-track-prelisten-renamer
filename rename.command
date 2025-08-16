@@ -1,36 +1,36 @@
 #!/bin/bash
 
-# Ordnerpfade relativ zum Speicherort des Skripts
+# Folder paths relative to the script's location
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
-ORDNER1="$SCRIPT_DIR/"
-ORDNER2="$SCRIPT_DIR/[previews]"
+FOLDER1="$SCRIPT_DIR/"
+FOLDER2="$SCRIPT_DIR/[previews]"
 
-# Farben für Ausgabe
+# Colors for output
 RED='\033[0;31m'
 GREEN='\033[0;32m'
 NC='\033[0m' # No Color
 
-echo "🔍 Vergleiche Dateien in:"
-echo "📁 Ordner1: $ORDNER1"
-echo "📁 Ordner2: $ORDNER2"
+echo "🔍 Comparing files in:"
+echo "📁 Folder1: $FOLDER1"
+echo "📁 Folder2: $FOLDER2"
 echo ""
 
-# Durchlaufe alle Dateien in Ordner1
-for file1 in "$ORDNER1"/*; do
+# Loop through all files in Folder1
+for file1 in "$FOLDER1"/*; do
     [[ -f "$file1" ]] || continue
     name1=$(basename "$file1")
     base1="${name1%.*}"
 
     echo $name1
 
-    # Durchlaufe alle Dateien in Ordner2
-    for file2 in "$ORDNER2"/*; do
+    # Loop through all files in Folder2
+    for file2 in "$FOLDER2"/*; do
         [[ -f "$file2" ]] || continue
         name2=$(basename "$file2")
 
-        # ⛔️ Ausschluss: Dateien mit [TrackData] im Namen
+        # ⛔️ Exclude: Files with [TrackData] in the name
         if [[ "$name2" == *"[TrackData]"* ]]; then
-            echo -e "⏭️  Überspringe: $name2 (enthält [TrackData])"
+            echo -e "⏭️  Skipping: $name2 (contains [TrackData])"
             continue
         fi
 
@@ -39,12 +39,12 @@ for file1 in "$ORDNER1"/*; do
 
         if [[ "$base1" == "$base2" ]]; then
             newname="${name1}.${ext2}"
-            mv "$file2" "$ORDNER2/$newname"
-            echo -e "${GREEN}✅ Umbenannt:${NC} $name2 → $newname"
+            mv "$file2" "$FOLDER2/$newname"
+            echo -e "${GREEN}✅ Renamed:${NC} $name2 → $newname"
         fi
     done
 done
-read -p "🔚 Drücke [Enter], um das Fenster zu schließen..."
+read -p "🔚 Press [Enter] to close the window..."
 
 echo ""
-echo "🏁 Fertig!"
+echo "🏁 Done!"
