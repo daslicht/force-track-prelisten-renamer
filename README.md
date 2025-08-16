@@ -19,12 +19,7 @@ This script scans two folders:
 It renames matching `.wav` files so they follow the required format and can be used for prelistening on the Force.
 
 ## ❓ Why the Rename?
-
-Akai Force does **not** allow dots (`.`) in filenames except for the final file extension. That means:
-
-- `Shimmer.wav` → ❌ Not recognized
-- `Shimmer.preview.wav` → ❌ Not recognized
-- `Shimmer.xtp.wav` → ✅ Recognized as preview for `Shimmer.xtp`
+Akai Force does not allow dots (.) in filenames except for the final file extension.  
 
 This script ensures that your preview files are renamed to match the exact track name, including the `.xtp` extension, followed by `.wav`.
 
@@ -34,6 +29,7 @@ Expected layout:
 
 ```
 YourProjectFolder/
+├── rename.command
 ├── Shimmer.xtp
 ├── Sunset.xtp
 └── [previews]/
