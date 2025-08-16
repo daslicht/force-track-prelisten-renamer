@@ -51,4 +51,4 @@ YourProjectFolder/
 3. Run the script:
 
 ```bash
-./force-track-prelisten-renamer.sh
+./renamer.command
